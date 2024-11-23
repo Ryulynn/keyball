@@ -40,12 +40,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 // tap -> hold時にtapの連続押しとして扱う設定のカスタマイズ
 // 特定のキーではQUICK_TAP_TERMで設定された秒数内でtap連続押しとして扱い、それ以外はtap連続押しを無効にする。
-uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case MT(MOD_LGUI, KC_SPC):  // Hold: 左Cmd, Tap: Space
-        case MT(MOD_RGUI, KC_ENT):  // Hold: 右Cmd, Tap: Enter
-            return QUICK_TAP_TERM;  // 指定のキーではQUICK_TAP_TERMを返す
-        default:
-            return 0;  // それ以外は無効
-    }
-}
+// uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case MT(MOD_LGUI, KC_SPC):  // Hold: 左Cmd, Tap: Space
+//         case MT(MOD_RGUI, KC_ENT):  // Hold: 右Cmd, Tap: Enter
+//             return QUICK_TAP_TERM;  // 指定のキーではQUICK_TAP_TERMを返す
+//         default:
+//             return 0;  // それ以外は無効
+//     }
+// }
