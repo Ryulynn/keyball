@@ -31,15 +31,6 @@ jobs:
       matrix:
         keyboard: [ keyball44 ]
         keymap: [ custom_v1 ]
-        include:
-          - keyboard: keyball46
-            keymap:   test_Left
-          - keyboard: keyball46
-            keymap:   test_Both
-          - keyboard: keyball46
-            keymap:   via_Left
-          - keyboard: keyball46
-            keymap:   via_Both
 
     uses: ./.github/workflows/build-firmware.yml
     with:
@@ -51,7 +42,7 @@ jobs:
     name: Check size
     runs-on: ubuntu-22.04
     needs:
-    - build
+      - build
 
     steps:
 
